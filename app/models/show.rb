@@ -5,7 +5,7 @@ class Show < ActiveRecord::Base
   has_many :actors,  through: :characters
   
   def actors_list
-    self.actors.collect do |act|
+    self.characters.collect do |act|
       "#{act.name} - #{act.show.name}"
     end
   end
